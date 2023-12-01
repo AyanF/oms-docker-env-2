@@ -17,7 +17,7 @@ provider "aws" {
 resource "aws_instance" "app_server" {
   ami           = "${var.AMI}"
   instance_type = "${var.EC2_INSTANCE_TYPE}"
-  key_name               = "oms-base-image"
+  key_name               = "test-moqui-server-3"
   monitoring             = false
   vpc_security_group_ids = ["sg-00db24f5e2d92db60"]
   subnet_id              = "subnet-0d02746ac07fdcd64"
