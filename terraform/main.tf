@@ -11,7 +11,7 @@ terraform {
 
 provider "aws" {
   profile = "default"
-  region  = "us-east-1"
+  region  = "us-west-2a"
 }
 
 resource "aws_instance" "app_server" {
@@ -19,8 +19,8 @@ resource "aws_instance" "app_server" {
   instance_type = "${var.EC2_INSTANCE_TYPE}"
   key_name               = "oms-base-image"
   monitoring             = false
-  vpc_security_group_ids = ["sg-02abe824088c2e44e"]
-  subnet_id              = "subnet-44cb8a20"
+  vpc_security_group_ids = ["sg-00db24f5e2d92db60"]
+  subnet_id              = "subnet-0d02746ac07fdcd64"
   availability_zone      = "${var.az_zone}"
   iam_instance_profile   = "ec2-ecr"
 
